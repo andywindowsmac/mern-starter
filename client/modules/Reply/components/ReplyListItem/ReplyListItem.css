@@ -1,0 +1,46 @@
+.single-reply {
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.author-nickname {
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: #212121;
+}
+
+.actions-wrapper {
+  display: flex;
+}
+
+.reply-content {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.reply-delete a{
+  font-size: 14px;
+  display: inline-block;
+  color: #FFF;
+  background: #f44336;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 500px;
+  float: right;
+}
+
+.reply-button {
+  margin: 0 5px;
+  font-size: 14px;
+  display: inline-block;
+  color: #FFF;
+  border-color: transparent;
+  background: #03A9F4;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 500px;
+  float: right;
+}

@@ -1,0 +1,10 @@
+.reply-button {
+  font-size: 14px;
+  color: #FFF;
+  border-color: transparent;
+  background: #03A9F4;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 500px;
+  float: left;
+}
