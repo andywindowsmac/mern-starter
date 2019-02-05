@@ -1,4 +1,5 @@
 import Post from './models/post';
+import Reply from './models/reply';
 
 export default function () {
   Post.count().exec((err, count) => {
@@ -38,6 +39,24 @@ export default function () {
     const post2 = new Post({ name: 'Admin', title: 'Lorem Ipsum', slug: 'lorem-ipsum', cuid: 'cikqgkv4q01ck7453ualdn3hf', content: content2 });
 
     Post.create([post1, post2], (error) => {
+      if (!error) {
+        // console.log('ready to go....');
+      }
+    });
+  });
+
+  Reply.count().exec((err, count) => {
+    if (count > 0) {
+      return;
+    }
+
+    const replyContent1 = 'Some comment';
+    const replyContent2 = 'Other comment';
+
+    const reply1 = new Reply({ nickname: 'Admin', cuid: 'bb97005183ed40058268fbf7d24df5d3', content: replyContent1, postCuid: 'cikqgkv4q01ck7453ualdn3hd' });
+    const reply2 = new Reply({ nickname: 'Admin', cuid: 'e62966a46cf94ea6b22c3b60a70dac0d', content: replyContent2, postCuid: 'cikqgkv4q01ck7453ualdn3hf' });
+
+    Reply.create([reply1, reply2], (error) => {
       if (!error) {
         // console.log('ready to go....');
       }
